@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JOBSINLINE - Unleash your career potential with AI-powered resume analysis and job matching.">
+  <meta name="keywords" content="job search, resume analysis, career tools, AI job matching">
+  <meta name="author" content="JOBSINLINE Team">
+  <title>JOBSINLINE - Elevate Your Career</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Add a favicon for professionalism -->
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1><a href="#home" aria-label="JOBSINLINE Home">JOBSINLINE</a></h1>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#upload">Analyze Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Unleash Your Career Potential</h2>
+      <p>Transform your job search with AI-powered resume analysis and personalized career insights.</p>
+      <a href="#upload" class="cta-button">Start Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About JOBSINLINE</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>**JOBSINLINE – Your AI-Powered Path to Career Success**</p>
+            <p>At JOBSINLINE, we are redefining the job search experience by seamlessly blending the power of advanced AI with a user-centric approach. Our intelligent technology goes beyond traditional resume screening, offering a deep, data-driven analysis of your skills, experience, and career aspirations. By precisely matching your profile with your dream job roles, we provide valuable insights into your hiring potential, identifying key strengths, highlighting skill gaps, and delivering personalized recommendations to refine your resume and enhance your career prospects.</p>
+            <p>Whether you're a seasoned professional looking to elevate your career or a fresh graduate stepping into the competitive job market, JOBSINLINE equips you with the essential tools, knowledge, and strategic guidance needed to stand out. Founded with a mission to revolutionize career-building, we leverage cutting-edge data science to simplify your job search journey, ensuring that you stay ahead in today’s fast-paced professional landscape. Your dream job isn’t just a possibility—it’s within reach with JOBSINLINE, your trusted partner in career success.</p>
+        </div>
+        <div class="about-image">
+          <img src="jobsinline.png" width=400 height=700  alt="JOBSINLINE Team">
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section id="features" class="features-section">
+  <div class="container">
+    <h2>Why Choose Us?</h2>
+    <div class="features-grid">
+      <article class="feature-card">
+        <i class="fas fa-file-alt"></i>
+        <h3>AI Resume Parsing</h3>
+        <p>Extract key details with precision using advanced AI.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-briefcase"></i>
+        <h3>Smart Job Matching</h3>
+        <p>Find roles tailored to your unique skills and experience.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Hiring Insights</h3>
+        <p>Predict your success with data-driven probability scores.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Skill Optimization</h3>
+        <p>Get recommendations to enhance your qualifications.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-comments"></i>
+        <h3>Expert Feedback</h3>
+        <p>Receive detailed, actionable resume improvement tips.</p>
+      </article>
+      <article class="feature-card">
+  <i class="fas fa-robot"></i>
+  <h3>Automated Resume Scoring</h3>
+  <p>Evaluate your resume’s strength with an AI-driven scoring system based on job requirements.</p>
+</article>
+    </div>
+  </div>
+</section>
+
+<section id="upload" class="upload-section">
+  <div class="container">
+    <h2>Analyze Your Resume</h2>
+    <form id="resumeForm" aria-label="Resume Analysis Form">
+      <div class="form-group">
+        <label for="resume">Upload Resume (PDF, DOC, DOCX)</label>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required aria-required="true">
+      </div>
+      <div class="form-group">
+        <label for="jobRoleSearch">Search Target Job Role</label>
+        <input type="text" id="jobRoleSearch" name="jobRoleSearch" placeholder="Type to search job roles..." aria-required="true">
+        <input type="hidden" id="jobRole" name="jobRole"> <!-- Hidden input to store selected role -->
+        <div id="jobRoleSuggestions" class="suggestions-box" style="display: none;"></div> <!-- Suggestions container -->
+      </div>
+      <button type="submit" class="submit-btn">Analyze Now <i class="fas fa-upload"></i></button>
+    </form>
+  </div>
+</section>
+
+  <section id="result" class="result-section">
+    <div class="container">
+      <h2>Your Analysis</h2>
+      <div id="loading" class="loading" style="display: none;">
+        <p>Processing your resume...</p>
+        <div class="spinner"></div>
+      </div>
+      <div id="resultContent" class="result-content"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>Questions? Reach out to our team for support.</p>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:saileshmalladi@gmail.com">saileshmalladi@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+919154343842">+91 9154343842</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Nagarjuna Nagar,Vijayawada,Andhra Pradesh-520008.,INDIA</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 JOBSINLINE. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html> 
